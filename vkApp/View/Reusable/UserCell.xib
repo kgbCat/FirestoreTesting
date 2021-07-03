@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="AHW-a9-9if" customClass="UserCell" customModule="vkApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHW-a9-9if" id="Q0p-ah-ORp">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-3C-S1m" customClass="AvatarBackShadow" customModule="vkApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="46" height="46.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-8A-kB8" customClass="UserAvatarImg" customModule="vkApp" customModuleProvider="target">
+                                <rect key="frame" x="3" y="3" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="EHZ-Wd-wuy"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rv4-Ld-cFL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WHf-8A-kB8" secondAttribute="bottom" constant="3" id="PVi-Oo-DXn"/>
+                            <constraint firstItem="WHf-8A-kB8" firstAttribute="top" secondItem="oq6-3C-S1m" secondAttribute="top" constant="3" id="SNJ-Jr-kFr"/>
+                            <constraint firstItem="WHf-8A-kB8" firstAttribute="leading" secondItem="oq6-3C-S1m" secondAttribute="leading" constant="3" id="dv8-en-riX"/>
+                            <constraint firstAttribute="width" secondItem="oq6-3C-S1m" secondAttribute="height" id="rjH-l7-b3P"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-rN-XnD">
+                        <rect key="frame" x="56" y="13" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qYe-rN-XnD" firstAttribute="leading" secondItem="oq6-3C-S1m" secondAttribute="trailing" constant="10" id="Cah-n3-OfE"/>
+                    <constraint firstAttribute="bottom" secondItem="oq6-3C-S1m" secondAttribute="bottom" id="FOE-5C-wFM"/>
+                    <constraint firstItem="qYe-rN-XnD" firstAttribute="centerY" secondItem="WHf-8A-kB8" secondAttribute="centerY" id="Mam-hO-5mm"/>
+                    <constraint firstItem="oq6-3C-S1m" firstAttribute="top" secondItem="Q0p-ah-ORp" secondAttribute="top" id="eLp-tc-xoq"/>
+                    <constraint firstItem="oq6-3C-S1m" firstAttribute="leading" secondItem="Q0p-ah-ORp" secondAttribute="leading" id="xTF-cq-2y1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="userAvatarImg" destination="WHf-8A-kB8" id="e9h-xq-5Po"/>
+                <outlet property="userName" destination="qYe-rN-XnD" id="Ct3-FT-M26"/>
+            </connections>
+            <point key="canvasLocation" x="-397.10144927536237" y="-8.0357142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
